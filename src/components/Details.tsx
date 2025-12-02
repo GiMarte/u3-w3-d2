@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { type detailsType } from "../types/detailsTypes";
 import SingleCard from "./SingleCard";
+import Spinner from "./Spinner";
 
 const Details = () => {
   const params = useParams();
@@ -23,8 +24,8 @@ const Details = () => {
       });
   };
   useEffect(getData, []);
-  
-  if (!data) return null;
+
+  if (!data) return <Spinner></Spinner>;
   return <SingleCard detail={data} />;
 };
 

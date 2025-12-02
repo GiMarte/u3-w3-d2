@@ -45,8 +45,9 @@ const SingleCard = (props: SingleCardProps) => {
           </Link>
         </div>
       </div>
-      <div className={`${params.id ? "d-block" : "d-none"}`}>
-        <h1>CARLO</h1>
+      <div className={`${params.id ? "d-flex" : "d-none"}`}>
+        <h1>Autore: {item.authors[0].name}</h1>
+        <p></p>
       </div>
     </div>
   );
