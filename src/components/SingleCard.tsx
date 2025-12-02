@@ -41,7 +41,7 @@ const SingleCard = (props: SingleCardProps) => {
           <Link
             className="bg-dark px-3 py-2 rounded-3"
             to={`${params.id ? "/" : item.id}`}>
-            Details
+            {params.id ? "Go back" : "Details"}
           </Link>
         </div>
       </div>
